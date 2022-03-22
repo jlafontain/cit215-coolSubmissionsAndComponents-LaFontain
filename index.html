@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cool Submissions and Components</title>
+</head>
+<body>
+
+<div id="app">
+    <h1>Try Submitting your Name and Email!</h1>
+    <input type="text" v-model="name" placeholder="Your Name..."/>
+    <input type="text" v-model="email" placeholder="Your Email..."/>
+    <div class="submit">{{submit}}</div>
+
+    <h2>Now try clicking some Names to see their CodeNames</h2>
+
+    <character v-for="item in list" v-bind:name="item.name" v-bind:code="item.codename" v-bind:reveal="item.reveal"></character>
+</div>
+
+<script src="vue.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
